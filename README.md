@@ -7,3 +7,6 @@ Open your terminal and run these commands
   <code>$ chmod +x ./install.sh</code>
 * 2- Run with root permission</br>
   <code>$ sudo ./install.sh</code>
+
+  # Preview
+  ![](https://github.com/Mohuva13/Show_emoji_on_archlinux_KDE_Plasma/blob/master/terminal.png)
