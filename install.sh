@@ -21,15 +21,12 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-#Check Internet connection with DL Host
-if ping -q -c 1 -W 1 archlinux.com >/dev/null; then
-  loadingAnimation &
-  sleep 1
-  selfID=$!
-  kill $selfID >/dev/null 2>&1
+#Check Internet connection with archlinux.org ping
+if ping -c 1 archlinux.org >/dev/null; then
+    echo "\n Internet connection is OK"
 else
-  echo "\n Please check your internet connection and try again."
-  exit 1
+    echo "\n Internet connection is not OK"
+    exit 1
 fi
 
 # Check user has installed noto-fonts-emoji or not
